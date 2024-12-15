@@ -23,7 +23,6 @@ Global
 		{4481C245-CB32-4A5B-B0AD-33A89764F8DC}.All|Any CPU.ActiveCfg = DefaultBuild
 		{4481C245-CB32-4A5B-B0AD-33A89764F8DC}.All|Any CPU.Build.0 = DefaultBuild
 		{4481C245-CB32-4A5B-B0AD-33A89764F8DC}.Debug|Any CPU.ActiveCfg = DefaultBuild
-		{4481C245-CB32-4A5B-B0AD-33A89764F8DC}.Debug|Any CPU.Build.0 = DefaultBuild
 		{4481C245-CB32-4A5B-B0AD-33A89764F8DC}.Release|Any CPU.ActiveCfg = DefaultBuild
 		{4481C245-CB32-4A5B-B0AD-33A89764F8DC}.Release|Any CPU.Build.0 = DefaultBuild
 	EndGlobalSection
@@ -31,7 +30,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_ExcelExportMode = MultipleSheets
 		RESX_PrefixTranslations = False
+		RESX_ExcelExportMode = MultipleSheets
 	EndGlobalSection
 EndGlobal
