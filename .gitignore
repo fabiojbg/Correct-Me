@@ -247,3 +247,4 @@ _Pvt_Extensions
 .fake/
 /Setup/Setup-cache
 /Setup\Setup-SetupFiles
+.vscode/
