@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="22.3" version="22.3" Modules="simple" RootPath="." Language="en" Id="{9E8521F0-98B6-4ABD-9EA6-9F5D7080774D}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_PREDEF_LCONDS_PROPS" Value="AI_DETECTED_DOTNET_VERSION"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ControlzEx.dll" Value="..\packages\ControlzEx.4.4.0\lib\net462"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CorrectMe.exe" Value="..\CorrectMe\bin\Release"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CorrectMe.exe.config" Value="..\CorrectMe\bin\Release"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CorrectMe.resources.dll" Value="..\CorrectMe\bin\Release\pt-BR"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_HtmlDiff.dll" Value="..\packages\htmldiff.net.1.5.0\lib\net462"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_MahApps.Metro.dll" Value="..\packages\MahApps.Metro.2.4.10\lib\net47"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Bcl.AsyncInterfaces.dll" Value="..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.0\lib\net462"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Xaml.Behaviors.dll" Value="..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_OpenAI.dll" Value="..\packages\OpenAI.2.0.0\lib\netstandard2.0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Buffers.dll" Value="..\packages\System.Buffers.4.5.1\lib\net461"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.ClientModel.dll" Value="..\packages\System.ClientModel.1.1.0\lib\netstandard2.0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Diagnostics.DiagnosticSource.dll" Value="..\packages\System.Diagnostics.DiagnosticSource.6.0.1\lib\net461"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.IO.Pipelines.dll" Value="..\packages\System.IO.Pipelines.9.0.0\lib\net462"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Memory.Data.dll" Value="..\packages\System.Memory.Data.1.0.2\lib\net461"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Memory.dll" Value="..\packages\System.Memory.4.5.5\lib\net461"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Numerics.Vectors.dll" Value="..\packages\System.Numerics.Vectors.4.5.0\lib\net46"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll" Value="..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Text.Encodings.Web.dll" Value="..\packages\System.Text.Encodings.Web.9.0.0\lib\net462"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Text.Json.dll" Value="..\packages\System.Text.Json.9.0.0\lib\net462"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Threading.Tasks.Extensions.dll" Value="..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.ValueTuple.dll" Value="..\packages\System.ValueTuple.4.5.0\lib\net47"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ControlzEx.dll" Value="ControlzEx.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CorrectMe.exe" Value="CorrectMe.exe"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CorrectMe.exe.config" Value="CorrectMe.exe.config"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CorrectMe.resources.dll" Value="CorrectMe.resources.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_HtmlDiff.dll" Value="HtmlDiff.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_MahApps.Metro.dll" Value="MahApps.Metro.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Bcl.AsyncInterfaces.dll" Value="Microsoft.Bcl.AsyncInterfaces.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll" Value="Microsoft.Xaml.Behaviors.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_OpenAI.dll" Value="OpenAI.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Buffers.dll" Value="System.Buffers.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.ClientModel.dll" Value="System.ClientModel.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Diagnostics.DiagnosticSource.dll" Value="System.Diagnostics.DiagnosticSource.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.IO.Pipelines.dll" Value="System.IO.Pipelines.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Memory.Data.dll" Value="System.Memory.Data.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Memory.dll" Value="System.Memory.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Numerics.Vectors.dll" Value="System.Numerics.Vectors.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll" Value="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Text.Encodings.Web.dll" Value="System.Text.Encodings.Web.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Text.Json.dll" Value="System.Text.Json.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Threading.Tasks.Extensions.dll" Value="System.Threading.Tasks.Extensions.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.ValueTuple.dll" Value="System.ValueTuple.dll"/>
+    <ROW Property="AI_REQUIRED_DOTNET_DISPLAY" MultiBuildValue="DefaultBuild:4.8.1" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_DOTNET_VERSION" MultiBuildValue="DefaultBuild:4.8.1" ValueLocId="-"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="app_logo_bg.exe" Type="8"/>
+    <ROW Property="Manufacturer" Value="Fabio Botelho"/>
+    <ROW Property="ProductCode" Value="1033:{4EDEEE10-F108-46A6-AF9B-FC092A442E98} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Correct Me!"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Options="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{DAEFD700-8E0F-496C-8FE7-1311E4558FA8}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT60" MultiBuildValue="DefaultBuild:Windows Vista/Server 2008" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT60Display" MultiBuildValue="DefaultBuild:Windows Vista/Server 2008" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1" DirectoryOptions="3"/>
+    <ROW Directory="CorrectMe_Dir" Directory_Parent="APPDIR" DefaultDir="CORREC~1|CorrectMe" DirectoryOptions="3"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="ptBR_Dir" Directory_Parent="CorrectMe_Dir" DefaultDir="pt-BR" DirectoryOptions="3"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SideBySideGuidComponent">
+    <ROW Component="APPDIR" Value="{E2C933DD-F8AD-4F23-9AC2-24F48190F30A}"/>
+    <ROW Component="ProductInformation" Value="{C963CD8C-FD9A-44D3-B448-0A6E13A8E035}"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{E2C933DD-F8AD-4F23-9AC2-24F48190F30A}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="CorrectMe_LocalizedResourcesOutput_ptBR" ComponentId="{F1366C3C-EBA1-47F8-BB35-A4251B12A5E1}" Directory_="ptBR_Dir" Attributes="0" KeyPath="CorrectMe.resources.dll"/>
+    <ROW Component="CorrectMe_PrimaryOutput" ComponentId="{FDC3A800-15D2-40D8-9A81-FC733B6C2505}" Directory_="CorrectMe_Dir" Attributes="0" KeyPath="CorrectMe.exe"/>
+    <ROW Component="CorrectMe_References" ComponentId="{90199A0F-B213-442B-9CEB-BD126AE0794C}" Directory_="CorrectMe_Dir" Attributes="0" KeyPath="System.ValueTuple.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{C963CD8C-FD9A-44D3-B448-0A6E13A8E035}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{779B27EA-E21E-4721-B4A1-6E2687D28E8C}" Directory_="SHORTCUTDIR" Attributes="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="CorrectMe.exe" Component_="CorrectMe_PrimaryOutput" FileName="CORREC~2.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_CorrectMe.exe]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CorrectMe.exe&gt;" SelfReg="false" DigSign="true"/>
+    <ROW File="CorrectMe.exe.config" Component_="CorrectMe_PrimaryOutput" FileName="CORREC~2.CON|[|AI_PROPPATH_FILENAME_PERBUILD_CorrectMe.exe.config]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CorrectMe.exe.config&gt;" SelfReg="false"/>
+    <ROW File="ControlzEx.dll" Component_="CorrectMe_References" FileName="CONTRO~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_ControlzEx.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ControlzEx.dll&gt;" SelfReg="false"/>
+    <ROW File="HtmlDiff.dll" Component_="CorrectMe_References" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_HtmlDiff.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_HtmlDiff.dll&gt;" SelfReg="false"/>
+    <ROW File="MahApps.Metro.dll" Component_="CorrectMe_References" FileName="MAHAPP~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_MahApps.Metro.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_MahApps.Metro.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.AsyncInterfaces.dll" Component_="CorrectMe_References" FileName="MICROS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Bcl.AsyncInterfaces.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Bcl.AsyncInterfaces.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Xaml.Behaviors.dll" Component_="CorrectMe_References" FileName="MICROS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Xaml.Behaviors.dll&gt;" SelfReg="false"/>
+    <ROW File="OpenAI.dll" Component_="CorrectMe_References" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_OpenAI.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_OpenAI.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Buffers.dll" Component_="CorrectMe_References" FileName="SYSTEM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Buffers.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Buffers.dll&gt;" SelfReg="false"/>
+    <ROW File="System.ClientModel.dll" Component_="CorrectMe_References" FileName="SYSTEM~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.ClientModel.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.ClientModel.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Diagnostics.DiagnosticSource.dll" Component_="CorrectMe_References" FileName="SYSTEM~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Diagnostics.DiagnosticSource.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Diagnostics.DiagnosticSource.dll&gt;" SelfReg="false"/>
+    <ROW File="System.IO.Pipelines.dll" Component_="CorrectMe_References" FileName="SYSTEM~5.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.IO.Pipelines.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.IO.Pipelines.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Memory.Data.dll" Component_="CorrectMe_References" FileName="SYSTEM~6.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Memory.Data.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Memory.Data.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Memory.dll" Component_="CorrectMe_References" FileName="SYSTEM~7.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Memory.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Memory.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll" Component_="CorrectMe_References" FileName="SYSTEM~8.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Numerics.Vectors.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Numerics.Vectors.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsafe.dll" Component_="CorrectMe_References" FileName="SYSTEM~9.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Text.Encodings.Web.dll" Component_="CorrectMe_References" FileName="SYSTE~10.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Text.Encodings.Web.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Text.Encodings.Web.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Text.Json.dll" Component_="CorrectMe_References" FileName="SYSTE~11.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Text.Json.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Text.Json.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Threading.Tasks.Extensions.dll" Component_="CorrectMe_References" FileName="SYSTE~12.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Threading.Tasks.Extensions.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Threading.Tasks.Extensions.dll&gt;" SelfReg="false"/>
+    <ROW File="System.ValueTuple.dll" Component_="CorrectMe_References" FileName="SYSTE~13.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.ValueTuple.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.ValueTuple.dll&gt;" SelfReg="false"/>
+    <ROW File="CorrectMe.resources.dll" Component_="CorrectMe_LocalizedResourcesOutput_ptBR" FileName="CORREC~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_CorrectMe.resources.dll]" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CorrectMe.resources.dll&gt;" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
+    <ROW Name="AI_APPPATH_PERBUILD_ControlzEx.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_ControlzEx.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_ControlzEx.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CorrectMe.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_CorrectMe.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_CorrectMe.exe]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CorrectMe.exe.config" Path="[|AI_PROPPATH_DIR_PERBUILD_CorrectMe.exe.config]\[|AI_PROPPATH_FILENAME_PERBUILD_CorrectMe.exe.config]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CorrectMe.resources.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_CorrectMe.resources.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_CorrectMe.resources.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_HtmlDiff.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_HtmlDiff.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_HtmlDiff.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_MahApps.Metro.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_MahApps.Metro.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_MahApps.Metro.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Bcl.AsyncInterfaces.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Bcl.AsyncInterfaces.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Bcl.AsyncInterfaces.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Xaml.Behaviors.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Xaml.Behaviors.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Xaml.Behaviors.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_OpenAI.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_OpenAI.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_OpenAI.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Buffers.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Buffers.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Buffers.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.ClientModel.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.ClientModel.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.ClientModel.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Diagnostics.DiagnosticSource.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Diagnostics.DiagnosticSource.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Diagnostics.DiagnosticSource.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.IO.Pipelines.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.IO.Pipelines.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.IO.Pipelines.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Memory.Data.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Memory.Data.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Memory.Data.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Memory.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Memory.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Memory.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Numerics.Vectors.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Numerics.Vectors.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Numerics.Vectors.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Runtime.CompilerServices.Unsafe.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Text.Encodings.Web.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Text.Encodings.Web.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Text.Encodings.Web.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Text.Json.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Text.Json.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Text.Json.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Threading.Tasks.Extensions.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Threading.Tasks.Extensions.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Threading.Tasks.Extensions.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.ValueTuple.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.ValueTuple.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.ValueTuple.dll]" Type="2" Content="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrapperUISequenceComponent">
+    <ROW Action="AI_DetectSoftware" Sequence="151"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="Themes.aip" Path="&lt;AI_FRAGS&gt;Themes.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DetectSoftware" Type="257" Source="SoftwareDetector.dll" Target="OnDetectSoftware"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Type="65" Source="aicustact.dll" Target="PreserveInstallType"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="CorrectMe_PrimaryOutput"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="CorrectMe_References"/>
+    <ROW Feature_="MainFeature" Component_="CorrectMe_LocalizedResourcesOutput_ptBR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="app_logo_bg.exe" SourcePath="..\CorrectMe\Images\app_logo_bg.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Sequence="199"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 600)" Description="[ProductName] cannot be installed on [WindowsTypeNT60Display]." DescriptionLocId="AI.LaunchCondition.NoNT60" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_DOTNET_VERSION &gt;= AI_REQUIRED_DOTNET_VERSION" Description="[ProductName] cannot be installed on systems with .NET Framework version lower than [AI_REQUIRED_DOTNET_DISPLAY]." DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Path" Root="-1" Key="Software\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[ProductName]" Name="\"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="CorrectMe" Directory_="SHORTCUTDIR" Name="CORREC~2|Correct Me!" Component_="CorrectMe_PrimaryOutput" Target="[#CorrectMe.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="CorrectMe_Dir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.VsProjectComponent">
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="PrimaryOutput" OutputFile="CorrectMe.exe" OutputFileShortcut="CorrectMe"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="PrimaryOutput" OutputFile="CorrectMe.exe.config"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="ControlzEx.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="HtmlDiff.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="MahApps.Metro.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="Microsoft.Bcl.AsyncInterfaces.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="Microsoft.Xaml.Behaviors.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="OpenAI.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="System.Buffers.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="System.ClientModel.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="System.Diagnostics.DiagnosticSource.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="System.IO.Pipelines.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="System.Memory.Data.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="System.Memory.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="System.Numerics.Vectors.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="System.Text.Encodings.Web.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="System.Text.Json.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="System.Threading.Tasks.Extensions.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="References" OutputFile="System.ValueTuple.dll"/>
+    <ROW ProjectId="{0566bce1-cc9d-4db9-bb6b-9a4a00b8a2ba}" ProjectName="CorrectMe" OutputGroup="LocalizedResourcesOutput" OutputFile="CorrectMe.resources.dll"/>
+  </COMPONENT>
+</DOCUMENT>

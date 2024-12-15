@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CorrectMe"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:localization="clr-namespace:CorrectMe.Localization" 
+                    xmlns:rs="clr-namespace:CorrectMe.Localization">
+
+    <system:String x:Key="DetectingInputLanguage">Detectando idioma de entrada</system:String>
+    <system:String x:Key="mnuSettings_Caption">_Configurações...</system:String>
+    <system:String x:Key="mnuSetKey_Caption">_Definir chave da API OpenAI</system:String>
+    <system:String x:Key="mnuLang_Caption">_Idioma</system:String>
+    <system:String x:Key="mnuLang_English_Caption">_English</system:String>
+    <system:String x:Key="mnuLang_Portuguese_Caption">Português _Brasileiro</system:String>
+    <system:String x:Key="mnuAbout_Caption">_Sobre...</system:String>
+    <system:String x:Key="txtUserInput_Caption">Seu texto:</system:String>
+    <system:String x:Key="txtAIoutput_Caption">Corrigido pela IA:</system:String>
+    <system:String x:Key="btnCorrect_Caption">CORRIGIR</system:String>
+    <system:String x:Key="txtComparison_Caption">Comparação:</system:String>
+    <system:String x:Key="btnTranslate_Caption">TRADUZIR</system:String>
+    <system:String x:Key="openAIKey_PopupHeader">Sua chave de API OpenAI é necessária para acessar o ChatGPT</system:String>
+    <system:String x:Key="openAIKey_PopupSubHeader">Para obter uma chave de API OpenAI, consulte o site oficial da API OpenAI em:</system:String>
+    <system:String x:Key="openAIKey_PopupSubHeader2">Importante: Sua chave secreta será armazenada em sua máquina e será utilizada apenas para acessar o ChatGPT.</system:String>
+    <system:String x:Key="openAIKey_Caption">Chace secreta da API da OpenAPI:</system:String>
+    <system:String x:Key="btnSave_Caption">Salvar</system:String>
+    <system:String x:Key="btnCancel_Caption">Cancelar</system:String>
+    <system:String x:Key="AboutPopup_Title">Sobre</system:String>
+    <system:String x:Key="AboutPopup_Header">CorrectMe!</system:String>
+    <system:String x:Key="AboutPopup_Subtitle">CorrectMe! é um projeto de código aberto patrocinado por Fabio Botelho para ajudar as pessoas a estudar e corrigir seus textos escritos em qualquer idioma.</system:String>
+    <system:String x:Key="btnOk_Caption">Ok</system:String>
+    <system:String x:Key="txtTranslatedByAIoutput_Caption">Traduzido pela IA:</system:String>
+    <system:String x:Key="tabCorrect_Caption">Corrigir</system:String>
+    <system:String x:Key="tabTranslate_Caption">Traduzir</system:String>
+</ResourceDictionary>

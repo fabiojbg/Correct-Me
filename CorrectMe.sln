@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorrectMe", "CorrectMe\CorrectMe.csproj", "{0566BCE1-CC9D-4DB9-BB6B-9A4A00B8A2BA}"
+EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Setup", "Setup\Setup.aiproj", "{4481C245-CB32-4A5B-B0AD-33A89764F8DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0566BCE1-CC9D-4DB9-BB6B-9A4A00B8A2BA}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{0566BCE1-CC9D-4DB9-BB6B-9A4A00B8A2BA}.All|Any CPU.Build.0 = Release|Any CPU
+		{0566BCE1-CC9D-4DB9-BB6B-9A4A00B8A2BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0566BCE1-CC9D-4DB9-BB6B-9A4A00B8A2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0566BCE1-CC9D-4DB9-BB6B-9A4A00B8A2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0566BCE1-CC9D-4DB9-BB6B-9A4A00B8A2BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4481C245-CB32-4A5B-B0AD-33A89764F8DC}.All|Any CPU.ActiveCfg = DefaultBuild
+		{4481C245-CB32-4A5B-B0AD-33A89764F8DC}.All|Any CPU.Build.0 = DefaultBuild
+		{4481C245-CB32-4A5B-B0AD-33A89764F8DC}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{4481C245-CB32-4A5B-B0AD-33A89764F8DC}.Debug|Any CPU.Build.0 = DefaultBuild
+		{4481C245-CB32-4A5B-B0AD-33A89764F8DC}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{4481C245-CB32-4A5B-B0AD-33A89764F8DC}.Release|Any CPU.Build.0 = DefaultBuild
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_ExcelExportMode = MultipleSheets
+		RESX_PrefixTranslations = False
+	EndGlobalSection
+EndGlobal
