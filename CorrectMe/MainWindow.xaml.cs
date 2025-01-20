@@ -1,14 +1,19 @@
 ﻿using CorrectMe.Localization;
 using CorrectMe.Services;
 using CorrectMe.Services.Models;
+using CorrectMe.Services.ValueTypes;
 using OpenAI.Chat;
 using System;
 using System.Globalization;
 using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media.Imaging;
 
 namespace CorrectMe
 {
@@ -16,8 +21,7 @@ namespace CorrectMe
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow
-    {
-        const string CHATGPT_MODEL = "gpt-4o";
+    {        
         bool isRunning = false;
 
         public MainWindow()
@@ -28,6 +32,10 @@ namespace CorrectMe
             this.Height = SystemParameters.PrimaryScreenHeight * 0.70;
 
             switchLanguage(AppSettings.UILanguage);
+
+            this.Title = String.Format(AppResources.MainWindow_Title, Assembly.GetExecutingAssembly().GetName().Version.ToString());
+
+            updateGPTBadges();
         }
 
         void UpdateUI(System.Action action)
@@ -37,16 +45,16 @@ namespace CorrectMe
 
         private void btnCorrect_Click(object sender, RoutedEventArgs e)
         {
-            if (!tryGetKey(out string openAIKey))
+            if (isRunning)
                 return;
 
-            if (isRunning)
+            if (!isGPTSettingsValid())
                 return;
 
             isRunning = true;
             DetectedLanguage detectedLanguage = new DetectedLanguage(LanguageDetector.UNKOWN_LANGUAGE, LanguageDetector.UNKOWN_LANGUAGE);
             string userText = txtUserInput.Text;
-            _ = Task.Run(() =>
+            _ = Task.Run(async () =>
             {
                 try
                 {
@@ -54,31 +62,23 @@ namespace CorrectMe
                     {
                         txtWaitMsg.Text = AppResources.Wait_DetectingLanguage;
                         grdWait.Visibility = Visibility.Visible;
+                        Mouse.OverrideCursor = Cursors.Wait;
                     });
 
-                    var detector = new LanguageDetector(openAIKey);
-                    detectedLanguage = detector.DetectLanguage("gpt-4o-mini",
-                                                               userText);
+                    var detector = new LanguageDetector(GPTDefinitions.FromSettings());
+                    detectedLanguage = await detector.DetectLanguage(userText);
 
                     if (detectedLanguage.LanguageInEnglish == LanguageDetector.UNKOWN_LANGUAGE)
                     {
-                        UpdateUI(() =>
-                        {
-                            txtAIResponse.Text = AppResources.Error_CouldNotDetermineTheLanguage;
-                        });
+                        UpdateUI(() => txtAIResponse.Text = AppResources.Error_CouldNotDetermineTheLanguage );
                         return;
                     }
-                    UpdateUI(() =>
-                    {
-                        txtAIResponse.Text = String.Format(AppResources.Msg_DetectedLanguage, detectedLanguage.LanguageInNative.ToUpper());
-                    });
+                    UpdateUI(() => txtAIResponse.Text = String.Format(AppResources.Msg_DetectedLanguage, 
+                                                                      detectedLanguage.LanguageInNative.ToUpper()) );
                 }
                 catch (Exception ex)
                 {
-                    UpdateUI(() =>
-                    {
-                        txtAIResponse.Text = String.Format(AppResources.Error_DetectingInputLanguageError, ex.Message);
-                    });
+                    UpdateUI(() => txtAIResponse.Text = String.Format(AppResources.Error_DetectingInputLanguageError, ex.Message));
                     return;
                 }
                 finally
@@ -87,27 +87,27 @@ namespace CorrectMe
                     UpdateUI(() =>
                     {
                         grdWait.Visibility = Visibility.Hidden;
+                        Mouse.OverrideCursor = null;
                     });
                 }
             })
-            .ContinueWith((t) =>
+            .ContinueWith(async (t) =>
             {
                 try
                 {
+                    UpdateUI(() => Mouse.OverrideCursor = Cursors.Wait);
                     if (detectedLanguage.LanguageInEnglish == LanguageDetector.UNKOWN_LANGUAGE)
                         return;
 
-                    correctTextMistakes(openAIKey, detectedLanguage, userText);
+                    await correctTextMistakes(detectedLanguage, userText);
                 }
                 catch (Exception ex)
                 {
-                    UpdateUI(() =>
-                    {
-                        txtAIResponse.Text = String.Format(AppResources.Error_CorrectingTheTextError, ex.Message);
-                    });
+                    UpdateUI(() => txtAIResponse.Text = String.Format(AppResources.Error_CorrectingTheTextError, ex.Message));
                 }
                 finally
                 {
+                    UpdateUI(() => Mouse.OverrideCursor = null);
                     isRunning = false;
                 }
             });
@@ -121,9 +121,8 @@ namespace CorrectMe
             return "American English";
         }
 
-        private void correctTextMistakes(string openAIKey,
-                                         DetectedLanguage language,
-                                         string userText)
+        private async Task correctTextMistakes(DetectedLanguage language,
+                                               string userText)
         {
             var stylingOutput = @"
 <html>
@@ -152,44 +151,39 @@ namespace CorrectMe
 </body>
 </html>
 ";
-            Task.Run(() =>
-            {
-                var languageCorrector = new LanguageCorrector(openAIKey);
-                var completionUpdates = languageCorrector.CorrectTextMistakes(language.LanguageInEnglish,
-                                                                              getCurrentUILanguage(),
-                                                                              userText);
-
-                var aiResponse = "";
-                foreach (StreamingChatCompletionUpdate completionUpdate in completionUpdates)
-                {
-                    if (completionUpdate.ContentUpdate.Count > 0)
-                    {
-                        var partResponse = completionUpdate.ContentUpdate[0].Text;
-                        aiResponse += partResponse;
-                        UpdateUI(() =>
-                        {
-                            txtAIResponse.Text += partResponse;
-                        });
-                    }
-                }
-
-                var diffHelper = new HtmlDiff.HtmlDiff(userText.Replace("\n", "<br>"),
-                                                       aiResponse.Replace("  \r\n", "\r\n")
-                                                                 .Replace("  \n", "\n")
-                                                                 .Replace("\n", "<br>"));
-                string diffOutput = diffHelper.Build();
-                diffOutput = stylingOutput.Replace("{{0}}", diffOutput);
-                UpdateUI(() =>
-                {
-                    webDiff.NavigateToString(diffOutput);
-                });
-            });
+            var aiResponse = "";
+            var languageCorrector = new LanguageCorrector(GPTDefinitions.FromSettings());
+            await languageCorrector.CorrectTextMistakes(language.LanguageInEnglish,
+                                getCurrentUILanguage(),
+                                userText,
+                                (responsePartReceived) => //onChunkReceived
+                                {
+                                    UpdateUI(() =>
+                                    {
+                                        aiResponse += responsePartReceived;
+                                        txtAIResponse.Text += responsePartReceived;
+                                    });
+                                },
+                                (completeResponse) =>  //onFinished
+                                {
+                                    var diffHelper = new HtmlDiff.HtmlDiff(userText.Replace("\n", "<br>"),
+                                                                            aiResponse.Replace("  \r\n", "\r\n")
+                                                                                        .Replace("  \n", "\n")
+                                                                                        .Replace("\n", "<br>"));
+                                    string diffOutput = diffHelper.Build();
+                                    diffOutput = stylingOutput.Replace("{{0}}", diffOutput);
+                                    UpdateUI( () => webDiff.NavigateToString(diffOutput) );
+                                },
+                                (ex) => //onError
+                                {
+                                    UpdateUI(() => txtAIResponse.Text += "There was an error while correcting text: " + ex.Message );
+                                }
+                                );
         }
 
-        bool tryGetKey(out string openAIKey)
+        bool isGPTSettingsValid()
         {
-            openAIKey = SecretKeyKeeper.GetKey();
-            if (openAIKey == null)
+            if (!GPTDefinitions.FromSettings().IsValid)
             {
                 MessageBox.Show(AppResources.Msg_SetOpenAIAPIKeyInTheSettingsMenu, AppResources.MsgBoxTitle_Error, MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
@@ -263,6 +257,7 @@ namespace CorrectMe
             var dialog = new OpenAIKeyDialog();
             dialog.Resources.MergedDictionaries.Add(dictLanguage);
             dialog.ShowDialog();
+            updateGPTBadges();
         }
 
         private void mnuLang_Change_Click(object sender, RoutedEventArgs e)
@@ -283,7 +278,7 @@ namespace CorrectMe
 
         private void btnTranslate_Click(object sender, RoutedEventArgs e)
         {
-            if (!tryGetKey(out string openAIKey))
+            if (!isGPTSettingsValid())
                 return;
 
             if (isRunning)
@@ -295,16 +290,16 @@ namespace CorrectMe
             string userText = txtUserInputToTranslate.Text;
             txtAITranslatedResponse.Text = "";
 
-            _ = Task.Run(() => {
+            UpdateUI(() => Mouse.OverrideCursor = Cursors.Wait);
+            _ = Task.Run(async () => {
 
                 try
                 {
                     var selectedLanguageInEnglish = getTargetLanguagesInEnglish().FirstOrDefault(x => x.Id == selectedLanguageInCombo?.Id);
 
-                    proceedTranslation(openAIKey,
-                                        detectedLanguage.LanguageInEnglish,
-                                        selectedLanguageInEnglish.ToString(),
-                                        userText);
+                    await proceedTranslation( detectedLanguage.LanguageInEnglish,
+                                              selectedLanguageInEnglish.ToString(),
+                                              userText);
                 }
                 catch (Exception ex)
                 {
@@ -316,6 +311,7 @@ namespace CorrectMe
                 finally
                 {
                     isRunning = false;
+                    UpdateUI(() => Mouse.OverrideCursor = null);
                 }
 
             });
@@ -323,33 +319,25 @@ namespace CorrectMe
 
         }
 
-        private void proceedTranslation(string openAIKey,
-                                         string fromLanguage,
-                                         string toLanguage,
-                                         string userText)
+        private async Task proceedTranslation(string fromLanguage,
+                                              string toLanguage,
+                                              string userText)
         {
-            Task.Run(() =>
-            {
-                var languageCorrector = new LanguageTranslator(openAIKey);
-                var completionUpdates = languageCorrector.Translate(fromLanguage,
-                                                                     toLanguage,
-                                                                     userText);
+            var languageCorrector = new LanguageTranslator(GPTDefinitions.FromSettings());
 
-                var aiResponse = "";
-                foreach (StreamingChatCompletionUpdate completionUpdate in completionUpdates)
-                {
-                    if (completionUpdate.ContentUpdate.Count > 0)
-                    {
-                        var partResponse = completionUpdate.ContentUpdate[0].Text;
-                        aiResponse += partResponse;
-                        UpdateUI(() =>
-                        {
-                            txtAITranslatedResponse.Text += partResponse;
-                        });
-                    }
-                }
-
-            });
+            await languageCorrector.Translate(fromLanguage,
+                                        toLanguage,
+                                        userText,
+                                        (responseChunk) =>
+                                        {
+                                            UpdateUI(() => txtAITranslatedResponse.Text += responseChunk );
+                                        },
+                                        null,
+                                        (ex) =>
+                                        {
+                                            UpdateUI(() => txtAITranslatedResponse.Text += $"There was an error while translating: {ex.Message}");
+                                        }
+                                        );
         }
 
         LanguageToTranslate[] getTargetLanguagesInEnglish()
@@ -369,6 +357,27 @@ namespace CorrectMe
         {
             if( cmbLanguagesToTranslate.SelectedItem != null)
                 AppSettings.TranslateTarget = (cmbLanguagesToTranslate.SelectedItem as LanguageToTranslate).Id;
+        }
+
+        private void updateGPTBadges()
+        {
+            var gptDef = GPTDefinitions.FromSettings();
+            if (gptDef.IsValid)
+            {
+                imgGPT.Visibility = imgGPT2.Visibility = imgModel.Visibility = imgModel2.Visibility = Visibility.Visible;
+                var gptName = gptDef.Type.ToString().Replace("-", "--").Replace(" ", "_").Replace("_", "__");
+                var gptModel = gptDef.Model.Replace("-", "--").Replace(" ", "_").Replace("_", "__");
+                imgGPT.Source = new Uri($"https://img.shields.io/badge/{HttpUtility.UrlEncode(gptName)}-blue?style=flat&cacheSeconds=600");
+                imgModel.Source = new Uri($"https://img.shields.io/badge/{HttpUtility.UrlEncode(gptModel)}-darkgreen?style=flat&cacheSeconds=600");
+
+                imgGPT2.Source = imgGPT.Source;
+                imgModel2.Source = imgModel.Source;
+            }
+            else
+            {
+                imgGPT.Visibility = imgGPT2.Visibility = imgModel.Visibility = imgModel2.Visibility = Visibility.Hidden;
+            }
+
         }
     }
 }

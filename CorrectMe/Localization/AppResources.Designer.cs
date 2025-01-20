@@ -61,6 +61,15 @@ namespace CorrectMe.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} (Recommended).
+        /// </summary>
+        public static string DefaultModel {
+            get {
+                return ResourceManager.GetString("DefaultModel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There was an error while correcting the text. Error = {0}.
         /// </summary>
         public static string Error_CorrectingTheTextError {
@@ -97,12 +106,30 @@ namespace CorrectMe.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Could not retrieve models. Verify the API Key. Error= {0}.
+        /// </summary>
+        public static string ErrorRetrievingModels {
+            get {
+                return ResourceManager.GetString("ErrorRetrievingModels", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0:Arabic;1:Dutch;2:*English;3:French;4:German;5:Hindi;6:Italian;7:Japanese;8:Korean;9:Portuguese (Brazilian);10:Portuguese (European);11:Russian;12:Spanish;13:Swedish;14:Turkish;15:Chinese
         ///.
         /// </summary>
         public static string LanguagesToTranslate {
             get {
                 return ResourceManager.GetString("LanguagesToTranslate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Correct me! ({0}).
+        /// </summary>
+        public static string MainWindow_Title {
+            get {
+                return ResourceManager.GetString("MainWindow_Title", resourceCulture);
             }
         }
         
@@ -128,7 +155,7 @@ namespace CorrectMe.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please, set the OpenAI API key in the settings menu..
+        ///   Looks up a localized string similar to Please, set the GPT model and API key in the settings menu..
         /// </summary>
         public static string Msg_SetOpenAIAPIKeyInTheSettingsMenu {
             get {
@@ -142,6 +169,33 @@ namespace CorrectMe.Localization {
         public static string MsgBoxTitle_Error {
             get {
                 return ResourceManager.GetString("MsgBoxTitle_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WARNING: You need to configure the GPT to use the corrector.
+        /// </summary>
+        public static string msgConfigureKey {
+            get {
+                return ResourceManager.GetString("msgConfigureKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading....
+        /// </summary>
+        public static string msgLoading {
+            get {
+                return ResourceManager.GetString("msgLoading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open to load....
+        /// </summary>
+        public static string msgOpenToLoad {
+            get {
+                return ResourceManager.GetString("msgOpenToLoad", resourceCulture);
             }
         }
         

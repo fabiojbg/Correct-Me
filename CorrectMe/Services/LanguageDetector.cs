@@ -1,5 +1,7 @@
 ﻿using CorrectMe.Extensions;
+using GPTSdk;
 using CorrectMe.Services.Models;
+using CorrectMe.Services.ValueTypes;
 using OpenAI.Chat;
 using System;
 using System.Collections.Generic;
@@ -24,27 +26,24 @@ You: Spanish;Español
 
 If you cannot be certain, guess your best. The user text is the following:
 ";
-        
-        string _openAIKey;
-        public LanguageDetector(string openAIKey)
+
+        private GPTDefinitions _gptDef;
+
+        public LanguageDetector(GPTDefinitions gpt_Definitions)
         {
-            _openAIKey = openAIKey;
+            _gptDef = gpt_Definitions;
         }
 
-        public DetectedLanguage DetectLanguage(string openAIModel, 
-                                               string textToDetect)
+        public async Task<DetectedLanguage> DetectLanguage(string textToDetect)
         {
-            ChatClient client = new ChatClient(model: openAIModel, apiKey: _openAIKey);
+            var GPTClient = GPTClientFactory.CreateClient(_gptDef.Type, _gptDef.APIKey, _gptDef.URL);
 
-            var systemMessage = ChatMessage.CreateSystemMessage(_detectingPrompt);
+            var systemMessage = GPTMessage.CreateSystemMessage(_detectingPrompt);
+            var userMessage = GPTMessage.CreateUserMessage(textToDetect.Trim());
 
-            var userMessage = ChatMessage.CreateUserMessage(textToDetect.Trim());
+            var responseText = await GPTClient.ChatAsync(_gptDef.Model, systemMessage, userMessage);
 
-            var response = client.CompleteChat(systemMessage, userMessage);
-
-            var responseText = response.Value.Content[0].Text;
-
-            if( responseText.ContainsCI("Unknown"))
+            if ( responseText.ContainsCI("Unknown"))
             {
                 return new DetectedLanguage("Unknown", "Unknown");
             }

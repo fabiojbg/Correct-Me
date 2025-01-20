@@ -9,6 +9,7 @@
         xmlns:properties="clr-namespace:CorrectMe.Properties"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
         xmlns:rs="clr-namespace:CorrectMe.Localization"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         Icon="./Images/app_logo_bg.png"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -83,9 +84,13 @@
                         </Button>
                         <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="2">
                             <Grid>
-                                <Label Content="{DynamicResource txtAIoutput_Caption}"   Margin="0,0,0,0"/>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="{DynamicResource txtAIoutput_Caption}"/>
+                                <svgc:SvgCanvas x:Name="imgGPT" VerticalAlignment="Top" Margin="0,5,5,0"/>
+                                <svgc:SvgCanvas x:Name="imgModel"  Margin="0,5,5,0"/>
+                                </StackPanel>
                                 <TextBox Text=""  x:Name="txtAIResponse"
-                     TextWrapping="Wrap" Height="Auto"
+                     TextWrapping="Wrap" 
                      AcceptsReturn="True"  AcceptsTab="True" Padding="5,5,5,5"
                     VerticalScrollBarVisibility="Auto" Margin="0,30,0,0"  />
                             </Grid>
@@ -132,8 +137,11 @@
                         <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="2">
                             <Grid>
                                 <ComboBox x:Name="cmbLanguagesToTranslate" Margin="0,0,0,0" Height="30" VerticalAlignment="Top" SelectionChanged="cmbLanguagesToTranslate_SelectionChanged"/>
-                                <Label Content="{DynamicResource txtTranslatedByAIoutput_Caption}"  
-                                       Margin="0,30,0,0" />
+                                <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                                    <Label Content="{DynamicResource txtTranslatedByAIoutput_Caption}"  />
+                                    <svgc:SvgCanvas x:Name="imgGPT2" VerticalAlignment="Top" Margin="0,5,5,0"/>
+                                    <svgc:SvgCanvas x:Name="imgModel2" VerticalAlignment="Top"  Margin="0,5,5,0"/>
+                                </StackPanel>
                                 <TextBox Text="" x:Name="txtAITranslatedResponse"
                      TextWrapping="Wrap" Margin="0,60,0,0"
                      AcceptsReturn="True"  AcceptsTab="True" Padding="5,5,5,5"

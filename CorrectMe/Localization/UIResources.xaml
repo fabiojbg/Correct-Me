@@ -7,7 +7,7 @@
 
     <system:String x:Key="DetectingInputLanguage">Detecting input language...</system:String>
     <system:String x:Key="mnuSettings_Caption">_Settings...</system:String>
-    <system:String x:Key="mnuSetKey_Caption">Set _OpenAI Api Key...</system:String>
+    <system:String x:Key="mnuSetKey_Caption">_GPT Settings...</system:String>
     <system:String x:Key="mnuLang_Caption">_Language</system:String>
     <system:String x:Key="mnuLang_English_Caption">_English</system:String>
     <system:String x:Key="mnuLang_Portuguese_Caption">Português _Brasileiro</system:String>
@@ -17,10 +17,10 @@
     <system:String x:Key="btnCorrect_Caption">CORRECT</system:String>
     <system:String x:Key="txtComparison_Caption">Comparison:</system:String>
     <system:String x:Key="btnTranslate_Caption">TRANSLATE</system:String>
-    <system:String x:Key="openAIKey_PopupHeader">Your OpenAI API key is needed to access ChatGPT</system:String>
-    <system:String x:Key="openAIKey_PopupSubHeader">To obtain an OpenAI API key, visit the official OpenAI API site at:</system:String>
-    <system:String x:Key="openAIKey_PopupSubHeader2">Important: Your secret key will be stored in your system and will be used only to access ChatGPT.</system:String>
-    <system:String x:Key="openAIKey_Caption">OpenAI secret key:</system:String>
+    <system:String x:Key="openAIKey_PopupHeader">A GPT (e.g., ChatGPT) is required for this application</system:String>
+    <system:String x:Key="openAIKey_PopupSubHeader">To obtain an access key for a GPT, visit the official GPT website.</system:String>
+    <system:String x:Key="openAIKey_PopupSubHeader2">Important: Your API key will be stored on your machine and will only be used to access the GPT.</system:String>
+    <system:String x:Key="openAIKey_Caption">GPT key:</system:String>
     <system:String x:Key="btnSave_Caption">Save</system:String>
     <system:String x:Key="btnCancel_Caption">Cancel</system:String>
     <system:String x:Key="AboutPopup_Title">About</system:String>
@@ -30,4 +30,12 @@
     <system:String x:Key="txtTranslatedByAIoutput_Caption">Translated by AI:</system:String>
     <system:String x:Key="tabCorrect_Caption">Correct</system:String>
     <system:String x:Key="tabTranslate_Caption">Translate</system:String>
+    <system:String x:Key="lblGPTSelection_Caption">GPT</system:String>
+    <system:String x:Key="GPTSelection_OpenAI">Open AI</system:String>
+    <system:String x:Key="GPTSelection_DeepSeek">DeepSeek</system:String>
+    <system:String x:Key="GPTSelection_Custom">Custom</system:String>
+    <system:String x:Key="lblModelSelection_Caption">GPT Model</system:String>
+    <system:String x:Key="dlgGPTSettings_Title">GPT Settings</system:String>
+    <system:String x:Key="lblGPTURL_Caption">GPT URL API: (e.g., https://api.openai.com/v1)</system:String>
+
 </ResourceDictionary>

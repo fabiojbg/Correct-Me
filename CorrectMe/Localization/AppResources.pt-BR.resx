@@ -136,7 +136,7 @@
     <value>Houve um erro ao corrigir o texto. Erro = {0}</value>
   </data>
   <data name="Msg_SetOpenAIAPIKeyInTheSettingsMenu" xml:space="preserve">
-    <value>Por favor, configure a chave da API da OpenAI no menu de configurações.</value>
+    <value>Por favor, configure o modelo GPT e sua chave da API no menu de configurações.</value>
   </data>
   <data name="MsgBoxTitle_Error" xml:space="preserve">
     <value>Erro</value>
@@ -149,5 +149,23 @@
   </data>
   <data name="LanguagesToTranslate" xml:space="preserve">
     <value>0:Árabe;1:Holandês;2:*Inglês;3:francês;4:Alemão;5:Hindi;6:Italiano;7:Japonês;8:Coreano;9:Português Brasileiro;10:Português Europeu ;11:Russo;12:Espanhol;13:Sueco;14:Turco;15:Chinese</value>
+  </data>
+  <data name="ErrorRetrievingModels" xml:space="preserve">
+    <value>Não foi possível listar os modelos de GPT desse serviço. Verifique a chave de API. Erro = {0}</value>
+  </data>
+  <data name="msgOpenToLoad" xml:space="preserve">
+    <value>Abra para carregar...</value>
+  </data>
+  <data name="msgLoading" xml:space="preserve">
+    <value>Carregando...</value>
+  </data>
+  <data name="MainWindow_Title" xml:space="preserve">
+    <value>Correct me! ({0})</value>
+  </data>
+  <data name="DefaultModel" xml:space="preserve">
+    <value>{0} (Recomendado)</value>
+  </data>
+  <data name="msgConfigureKey" xml:space="preserve">
+    <value>AVISO: Você precisa configura a chave de api do GPT para usar o corretor</value>
   </data>
 </root>

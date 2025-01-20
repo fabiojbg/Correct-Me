@@ -7,8 +7,8 @@
         xmlns:local="clr-namespace:CorrectMe"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen" Width="500" Height="260"                  
-        Title="OpenAI API Key" >
+        WindowStartupLocation="CenterScreen" Width="500" Height="395"                  
+        Title="GPT Definition" Closed="MetroWindow_Closed" >
     <StackPanel Orientation="Horizontal">
         <Image x:Name="___Images_user_secret_png" Margin="14,18,0,0" Width="64" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Images/user_secret.png"/>
         <StackPanel Orientation="Vertical"  Margin="10">
@@ -16,27 +16,44 @@
                    Text="{DynamicResource openAIKey_PopupHeader}" FontSize="13" FontWeight="Bold"/>
             <TextBlock x:Name="textBlock2" Margin="0,10,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="363" >
             <Run Text="{DynamicResource openAIKey_PopupSubHeader}"/>
-            <Hyperlink NavigateUri="https://openai.com/api/" >OpenAI API</Hyperlink>
-        </TextBlock>
+            </TextBlock>
             <TextBlock x:Name="textBlock3" Margin="0,10,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"
                    Width="363" ><Run Text="{DynamicResource openAIKey_PopupSubHeader2}"/>
-        </TextBlock>
-        <Label x:Name="label" Content="{DynamicResource openAIKey_Caption}" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtSecretKey"  HorizontalAlignment="Left" Margin="5,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="390"/>
-        <StackPanel Orientation="Horizontal" Margin="10,10,0,0"  HorizontalAlignment="Right">
-            <Button x:Name="btnSaveKey" HorizontalAlignment="Left"  VerticalAlignment="Top" HorizontalContentAlignment="Stretch" Padding="2" Click="btnSaveKey_Click">
-                <StackPanel Orientation="Horizontal" >
-                    <Image Source="/Images/blue-check.png" Margin="5,0,0,0" Width="24" />
-                    <Label Content="{DynamicResource btnSave_Caption}" Margin="0,0,0,0"  HorizontalContentAlignment="Stretch"  FontSize="12" />
-                </StackPanel>
-            </Button>
-            <Button x:Name="btnCancel" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" Padding="2" Click="btnCancel_Click">
-                <StackPanel Orientation="Horizontal" >
-                    <Image Source="/Images/red-cancel.png" Margin="5,0,0,0" Width="24" />
-                    <Label Content="{DynamicResource btnCancel_Caption}" Margin="0,0,0,0"  HorizontalContentAlignment="Stretch"  FontSize="12" />
-                </StackPanel>
-            </Button>
-        </StackPanel>
+            </TextBlock>
+            
+            <Label Content="{DynamicResource lblGPTSelection_Caption}" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            <ComboBox x:Name="cmbGPTSelection" HorizontalAlignment="Left" Margin="5,0,0,0" Width="243" IsReadOnly="True" SelectedIndex="0" RenderTransformOrigin="0.048,0.453" FontSize="14" SelectionChanged="cmbGPTSelection_SelectionChanged">
+                <ComboBoxItem Content="{DynamicResource GPTSelection_OpenAI}"/>
+                <ComboBoxItem Content="{DynamicResource GPTSelection_DeepSeek}"/>
+                <ComboBoxItem Content="{DynamicResource GPTSelection_Custom}"/>
+            </ComboBox>
+
+            <StackPanel x:Name="stkGPTURL" Orientation="Vertical"  Visibility="Collapsed">
+                <Label Content="{DynamicResource lblGPTURL_Caption}" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtGPTURL"  HorizontalAlignment="Left" Margin="5,0,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="390" TextChanged="textComponent_TextChanged"/>
+            </StackPanel>
+            
+            <Label Content="{DynamicResource openAIKey_Caption}" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtSecretKey"  HorizontalAlignment="Left" Margin="5,0,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="390" TextChanged="textComponent_TextChanged"/>
+
+            <Label Content="{DynamicResource lblModelSelection_Caption}" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            <ComboBox x:Name="cmbGPTModelSelection" HorizontalAlignment="Left" Margin="5,0,0,0" Width="280" IsReadOnly="True" SelectedIndex="0" RenderTransformOrigin="0.048,0.453" FontSize="14" GotFocus="cmbGPTModelSelection_GotFocus" DropDownOpened="cmbGPTModelSelection_DropDownOpened">
+            </ComboBox>
+
+            <StackPanel Orientation="Horizontal" Margin="10,20,0,0"  HorizontalAlignment="Right">
+                <Button x:Name="btnSaveKey" HorizontalAlignment="Left"  VerticalAlignment="Top" HorizontalContentAlignment="Stretch" Padding="2" Click="btnSaveKey_Click">
+                    <StackPanel Orientation="Horizontal" >
+                        <Image Source="/Images/blue-check.png" Margin="5,0,0,0" Width="24" />
+                        <Label Content="{DynamicResource btnSave_Caption}" Margin="0,0,0,0"  HorizontalContentAlignment="Stretch"  FontSize="12" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnCancel" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" Padding="2" Click="btnCancel_Click">
+                    <StackPanel Orientation="Horizontal" >
+                        <Image Source="/Images/red-cancel.png" Margin="5,0,0,0" Width="24" />
+                        <Label Content="{DynamicResource btnCancel_Caption}" Margin="0,0,0,0"  HorizontalContentAlignment="Stretch"  FontSize="12" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
         </StackPanel>
     </StackPanel>
     <Window.Resources>
