@@ -34,7 +34,7 @@
             </StackPanel>
             
             <Label Content="{DynamicResource openAIKey_Caption}" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txtSecretKey"  HorizontalAlignment="Left" Margin="5,0,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="390" TextChanged="textComponent_TextChanged"/>
+            <TextBox x:Name="txtSecretKey"  HorizontalAlignment="Left" Margin="5,0,10,0" Text="" VerticalAlignment="Top" Width="390" TextChanged="textComponent_TextChanged"/>
 
             <Label Content="{DynamicResource lblModelSelection_Caption}" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
             <ComboBox x:Name="cmbGPTModelSelection" HorizontalAlignment="Left" Margin="5,0,0,0" Width="280" IsReadOnly="True" SelectedIndex="0" RenderTransformOrigin="0.048,0.453" FontSize="14" GotFocus="cmbGPTModelSelection_GotFocus" DropDownOpened="cmbGPTModelSelection_DropDownOpened">
