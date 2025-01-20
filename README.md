@@ -5,7 +5,7 @@
  <img alt="AI Text Translator" src="https://img.shields.io/badge/AI-Text Translator-blue?style=flat" />&nbsp;
  <a href="https://www.openai.com" target="_blank"><img alt="OpenAI" src="https://img.shields.io/badge/Open-AI-blue?style=flat" /></a>&nbsp;
  <a href="https://www.deepseek.com" target="_blank"><img alt="DeepSeek V3" src="https://img.shields.io/badge/DeepSeek_V3-AI-blue?style=flat" /></a><br>
- <a href="https://github.com/fabiojbg/Correct-Me/releases/tag/1.1.0"><img alt="Download" src="https://img.shields.io/badge/Download-v1.1.0-green?style=flat" /></a>
+ <a href="https://github.com/fabiojbg/Correct-Me/releases/latest"><img alt="Download" src="https://img.shields.io/badge/Download-v1.1.0-green?style=flat" /></a>
  <a href="https://www.paypal.com/donate/?business=G47L9N4UW8C2C&no_recurring=1&item_name=Thank+you+%21%21%21&currency_code=USD"><img alt="Download" src="https://img.shields.io/badge/Buy_me_a_beer-👍  😊  👍-yellow?style=flat" /></a>
 </div>
 <br>
