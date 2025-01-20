@@ -200,12 +200,14 @@ namespace CorrectMe
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("pt-BR");
                 mnuLang_English.IsChecked = false;
                 mnuLang_Portuguese.IsChecked = true;
+                AppSettings.UILanguage = "PT";
             }
             else
             {
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
                 mnuLang_English.IsChecked = true;
                 mnuLang_Portuguese.IsChecked = false;
+                AppSettings.UILanguage = "EN";
             }
             Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture;
 
