@@ -49,6 +49,9 @@ namespace CorrectMe
 
         private void initForm(bool isChangingSelection)
         {
+            cmbGPTSelection.ItemsSource = Enum.GetValues(typeof(GPTServiceType)).Cast<GPTServiceType>()
+                                              .Select( gpt => AppResources.ResourceManager.GetString("GPTSelection_" + gpt))
+                                              .ToList();
             cmbGPTSelection.SelectedIndex = (int)Enum.Parse(typeof(GPTServiceType), AppSettings.GPT_Type);
             
             if( !isChangingSelection)

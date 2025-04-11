@@ -19,6 +19,8 @@ namespace GPTSdk
                     return new OpenAIClient(apiKey);
                 case GPTServiceType.DeepSeek:
                     return new DeepSeekClient(apiKey);
+                case GPTServiceType.OpenRouter:
+                    return new OpenRouterAIClient(apiKey);
                 case GPTServiceType.Custom:
                     return new CustomGPTClient(serviceURL, apiKey);
                 default:
@@ -41,6 +43,15 @@ namespace GPTSdk
     {
         public string DefaultModel { get; set; } = "deepseek-chat"; 
         public DeepSeekClient(string apiKey) : base("https://api.deepseek.com", apiKey)
+        {
+
+        }
+    }
+
+    public class OpenRouterAIClient : GPTClient, IChatGPTApiClient
+    {
+        public string DefaultModel { get; set; } = "deepseek/deepseek-chat-v3-0324:free";
+        public OpenRouterAIClient(string apiKey) : base("https://openrouter.ai/api", apiKey)
         {
 
         }

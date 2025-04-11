@@ -3,6 +3,7 @@ using CorrectMe.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Runtime.Remoting.Messaging;
@@ -17,7 +18,7 @@ namespace GPTSdk
     {
         private readonly HttpClient _httpClient;
         private readonly string _apiKey;
-
+        private readonly string _baseUrlExtension;
         string IChatGPTApiClient.DefaultModel => throw new NotImplementedException();
 
         /// <summary>
@@ -31,6 +32,10 @@ namespace GPTSdk
             {
                 BaseAddress = new Uri(baseUrl)
             };
+
+            //_baseUrlExtension is the part of the base url after the domain name
+            _baseUrlExtension = new Uri(baseUrl).AbsolutePath.Trim('/');
+
             _apiKey = apiKey;
             // Set up the default headers
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
@@ -43,7 +48,7 @@ namespace GPTSdk
         /// <returns>A list of model names as strings.</returns>
         public async Task<IEnumerable<string>> ListModelsAsync()
         {
-            var response = await _httpClient.GetAsync("v1/models");
+            var response = await _httpClient.GetAsync($"{_baseUrlExtension}/v1/models");
 
             await treatResponseError(response);
             // Parse the JSON response
@@ -62,7 +67,7 @@ namespace GPTSdk
                         }
                     }
                 }
-                return models;
+                return models.OrderBy(x => x).ToList();
             }
         }
 
@@ -126,7 +131,7 @@ namespace GPTSdk
                                                 Encoding.UTF8,
                                                 "application/json");
 
-                var request = new HttpRequestMessage(HttpMethod.Post, "v1/chat/completions")
+                var request = new HttpRequestMessage(HttpMethod.Post, $"{_baseUrlExtension}/v1/chat/completions")
                 {
                     Content = content
                 };
@@ -150,7 +155,7 @@ namespace GPTSdk
                             serializedChunk = serializedChunk.Substring("data:".Length);
                             var completionPart = JsonSerializer.Deserialize<GPTStreamCompletion>(serializedChunk,
                                                                                                  new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-                            var textChunk = completionPart.Choices?[0]?.Delta?.Content;
+                            var textChunk = completionPart.Choices?.Any() != false ? completionPart.Choices?[0]?.Delta?.Content : String.Empty;
                             if (!string.IsNullOrEmpty(textChunk))
                             {
                                 completeResponse.AppendLine(textChunk);
@@ -175,24 +180,12 @@ namespace GPTSdk
         /// <param name="response">The HTTP response message to check for errors.</param>
         private async Task treatResponseError(HttpResponseMessage response)
         {
-            var error = "";
-            try
+            if (!response.IsSuccessStatusCode)
             {
-                response.EnsureSuccessStatusCode();
-            }
-            catch (Exception ex)
-            {
-                try
-                {
-                    var errorInResponse = await response.Content.ReadAsStringAsync();
-                    error = $"Error: {ex.Message}. Details={errorInResponse}";
-                }
-                catch { }
-
+                var errorInResponse = await response.Content.ReadAsStringAsync();
+                var error = $"Error: {response.StatusCode}. Details={errorInResponse}";
                 if (!String.IsNullOrWhiteSpace(error))
-                    throw new Exception(error, ex);
-
-                throw;
+                    throw new Exception(error);
             }
         }
     }

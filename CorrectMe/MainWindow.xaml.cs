@@ -154,31 +154,47 @@ namespace CorrectMe
             var aiResponse = "";
             var languageCorrector = new LanguageCorrector(GPTDefinitions.FromSettings());
             await languageCorrector.CorrectTextMistakes(language.LanguageInEnglish,
-                                getCurrentUILanguage(),
-                                userText,
-                                (responsePartReceived) => //onChunkReceived
-                                {
-                                    UpdateUI(() =>
-                                    {
-                                        aiResponse += responsePartReceived;
-                                        txtAIResponse.Text += responsePartReceived;
-                                    });
-                                },
-                                (completeResponse) =>  //onFinished
-                                {
-                                    var diffHelper = new HtmlDiff.HtmlDiff(userText.Replace("\n", "<br>"),
-                                                                            aiResponse.Replace("  \r\n", "\r\n")
-                                                                                        .Replace("  \n", "\n")
-                                                                                        .Replace("\n", "<br>"));
-                                    string diffOutput = diffHelper.Build();
-                                    diffOutput = stylingOutput.Replace("{{0}}", diffOutput);
-                                    UpdateUI( () => webDiff.NavigateToString(diffOutput) );
-                                },
-                                (ex) => //onError
-                                {
-                                    UpdateUI(() => txtAIResponse.Text += "There was an error while correcting text: " + ex.Message );
-                                }
-                                );
+                        getCurrentUILanguage(),
+                        userText,
+                        (responsePartReceived) => //onChunkReceived
+                        {
+                            UpdateUI(() =>
+                            {
+                                aiResponse += responsePartReceived;
+                                txtAIResponse.Text += responsePartReceived;
+                            });
+                        },
+                        (completeResponse) =>  //onFinished
+                        {
+                            aiResponse = removeThinkingText(aiResponse);
+                            var diffHelper = new HtmlDiff.HtmlDiff(userText.Replace("\n", "<br>"),
+                                                                    aiResponse.Replace("  \r\n", "\r\n")
+                                                                                .Replace("  \n", "\n")
+                                                                                .Replace("\n", "<br>"));
+                            string diffOutput = diffHelper.Build();
+                            diffOutput = stylingOutput.Replace("{{0}}", diffOutput);
+                            UpdateUI( () => webDiff.NavigateToString(diffOutput) );
+                        },
+                        (ex) => //onError
+                        {
+                            UpdateUI(() => txtAIResponse.Text += "There was an error while correcting text: " + ex.Message );
+                        }
+                        );
+        }
+
+        string removeThinkingText(string aiResponse)
+        {
+            // remove, from aiResponse, the text between the <think> and </think> tags. Remove the tags also
+            int startIndex = aiResponse.IndexOf("<think>", StringComparison.OrdinalIgnoreCase);
+            if (startIndex != -1)
+            {
+                int endIndex = aiResponse.IndexOf("</think>", startIndex, StringComparison.OrdinalIgnoreCase);
+                if (endIndex != -1)
+                {
+                    aiResponse = aiResponse.Remove(startIndex, endIndex - startIndex + "</think>".Length);
+                }
+            }
+            return aiResponse.Trim();
         }
 
         bool isGPTSettingsValid()

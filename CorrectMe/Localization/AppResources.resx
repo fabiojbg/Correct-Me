@@ -169,4 +169,16 @@
   <data name="msgConfigureKey" xml:space="preserve">
     <value>WARNING: You need to configure the GPT to use the corrector</value>
   </data>
+  <data name="GPTSelection_OpenAI" xml:space="preserve">
+    <value>OpenAI</value>
+  </data>
+  <data name="GPTSelection_DeepSeek" xml:space="preserve">
+    <value>DeepSeek</value>
+  </data>
+  <data name="GPTSelection_OpenRouter" xml:space="preserve">
+    <value>OpenRouter</value>
+  </data>
+  <data name="GPTSelection_Custom" xml:space="preserve">
+    <value>OpenAI Compatible</value>
+  </data>
 </root>

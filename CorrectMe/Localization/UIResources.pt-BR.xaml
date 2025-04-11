@@ -31,10 +31,7 @@
     <system:String x:Key="tabCorrect_Caption">Corrigir</system:String>
     <system:String x:Key="tabTranslate_Caption">Traduzir</system:String>
     <system:String x:Key="lblGPTSelection_Caption">GPT</system:String>
-    <system:String x:Key="GPTSelection_OpenAI">Open AI</system:String>
-    <system:String x:Key="GPTSelection_DeepSeek">DeepSeek</system:String>
-    <system:String x:Key="GPTSelection_Custom">Customizada</system:String>
     <system:String x:Key="lblModelSelection_Caption">Modelo do GPT</system:String>
     <system:String x:Key="dlgGPTSettings_Title">Configurações do GPT</system:String>
-    <system:String x:Key="lblGPTURL_Caption">URL da API do GPT: (ex: https://api.openai.com/v1)</system:String>
+    <system:String x:Key="lblGPTURL_Caption">URL da API do GPT: (ex: https://api.openai.com)</system:String>
 </ResourceDictionary>

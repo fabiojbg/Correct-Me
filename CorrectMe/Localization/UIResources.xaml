@@ -31,11 +31,8 @@
     <system:String x:Key="tabCorrect_Caption">Correct</system:String>
     <system:String x:Key="tabTranslate_Caption">Translate</system:String>
     <system:String x:Key="lblGPTSelection_Caption">GPT</system:String>
-    <system:String x:Key="GPTSelection_OpenAI">Open AI</system:String>
-    <system:String x:Key="GPTSelection_DeepSeek">DeepSeek</system:String>
-    <system:String x:Key="GPTSelection_Custom">Custom</system:String>
     <system:String x:Key="lblModelSelection_Caption">GPT Model</system:String>
     <system:String x:Key="dlgGPTSettings_Title">GPT Settings</system:String>
-    <system:String x:Key="lblGPTURL_Caption">GPT URL API: (e.g., https://api.openai.com/v1)</system:String>
+    <system:String x:Key="lblGPTURL_Caption">GPT URL API: (e.g., https://api.openai.com)</system:String>
 
 </ResourceDictionary>

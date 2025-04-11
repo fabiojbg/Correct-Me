@@ -70,7 +70,7 @@
     <ROW Property="ProductCode" Value="1033:{5B8E0326-D920-4A9E-9ED1-E2530DB80FE3} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Correct Me!"/>
-    <ROW Property="ProductVersion" Value="1.1.0.3" Options="32"/>
+    <ROW Property="ProductVersion" Value="1.2.0.0" Options="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{DAEFD700-8E0F-496C-8FE7-1311E4558FA8}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>

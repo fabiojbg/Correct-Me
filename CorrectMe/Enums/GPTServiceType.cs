@@ -4,6 +4,7 @@
     {
         OpenAI,
         DeepSeek,
+        OpenRouter,
         Custom
     }
 }

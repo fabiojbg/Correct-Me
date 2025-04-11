@@ -115,6 +115,42 @@ namespace CorrectMe.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to OpenAI Compatible.
+        /// </summary>
+        public static string GPTSelection_Custom {
+            get {
+                return ResourceManager.GetString("GPTSelection_Custom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DeepSeek.
+        /// </summary>
+        public static string GPTSelection_DeepSeek {
+            get {
+                return ResourceManager.GetString("GPTSelection_DeepSeek", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OpenAI.
+        /// </summary>
+        public static string GPTSelection_OpenAI {
+            get {
+                return ResourceManager.GetString("GPTSelection_OpenAI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OpenRouter.
+        /// </summary>
+        public static string GPTSelection_OpenRouter {
+            get {
+                return ResourceManager.GetString("GPTSelection_OpenRouter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0:Arabic;1:Dutch;2:*English;3:French;4:German;5:Hindi;6:Italian;7:Japanese;8:Korean;9:Portuguese (Brazilian);10:Portuguese (European);11:Russian;12:Spanish;13:Swedish;14:Turkish;15:Chinese
         ///.
         /// </summary>
